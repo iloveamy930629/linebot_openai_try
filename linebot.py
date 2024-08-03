@@ -6,12 +6,19 @@ from linebot.exceptions import (
     InvalidSignatureError
 )
 from linebot.models import *
+#======python的函數庫==========
+import tempfile, os
+import datetime
 import openai
+import time
+import traceback
+
 import pymongo
+from openai import OpenAI
+from pymongo import MongoClient
 import pandas as pd
 import warnings
-import os
-import traceback
+
 
 # Load environment variables
 from dotenv import load_dotenv
@@ -19,7 +26,7 @@ load_dotenv()
 
 # Initialize Flask app
 app = Flask(__name__)
-
+static_tmp_path = os.path.join(os.path.dirname(__file__), 'static', 'tmp')
 # Line bot setup
 line_bot_api = LineBotApi(os.getenv('CHANNEL_ACCESS_TOKEN'))
 handler = WebhookHandler(os.getenv('CHANNEL_SECRET'))
