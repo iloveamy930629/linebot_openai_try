@@ -79,7 +79,7 @@ def vector_search(user_query, collection):
                 "_id": 0,
                 "name": 1,
                 "description": 1,
-                "link": 0,
+                "link": 1,
                 "score": {
                     "$meta": "vectorSearchScore"
                 }
