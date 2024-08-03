@@ -50,7 +50,7 @@ def get_embedding(text):
     if not text or not isinstance(text, str):
         return None
     try:
-        embedding = openai_client.Embedding.create(input=text, model=EMBEDDING_MODEL).data[0].embedding
+        embedding = openai_client.embeddings.create(input=text, model=EMBEDDING_MODEL).data[0].embedding
         return embedding
     except Exception as e:
         print(f"Error in get_embedding: {e}")
