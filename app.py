@@ -9,7 +9,7 @@ from linebot.models import *
 #======python的函數庫==========
 import tempfile, os
 import datetime
-import openai
+# import openai
 import time
 import traceback
 
@@ -31,7 +31,7 @@ line_bot_api = LineBotApi(os.getenv('CHANNEL_ACCESS_TOKEN'))
 handler = WebhookHandler(os.getenv('CHANNEL_SECRET'))
 
 # OpenAI API Key
-openai.api_key = os.getenv('OPENAI_API_KEY')
+openai_client = OpenAI(api_key=os.getenv('OPENAI_API_KEY'))
 
 # MongoDB connection
 mongo_uri = os.getenv('MONGODB_URI')
@@ -50,7 +50,7 @@ def get_embedding(text):
     if not text or not isinstance(text, str):
         return None
     try:
-        embedding = openai.Embedding.create(input=text, model=EMBEDDING_MODEL).data[0].embedding
+        embedding = openai_client.Embedding.create(input=text, model=EMBEDDING_MODEL).data[0].embedding
         return embedding
     except Exception as e:
         print(f"Error in get_embedding: {e}")
@@ -102,7 +102,7 @@ def handle_user_query(query):
             f"Borough: {result.get('borough', 'N/A')}\n"
         )
 
-    completion = openai.Completion.create(
+    completion = openai_client.chat.completions.create(
         model="gpt-3.5-turbo",
         prompt=f"Answer this user query: {query} with the following context: {result_str}",
         temperature=0.5,
