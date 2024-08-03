@@ -41,8 +41,8 @@ mongo_uri = "mongodb+srv://AmyChen:amy930629@linebotdb.ihw7ynt.mongodb.net/?retr
 mongo_client = get_mongo_client(mongo_uri)
 
 if mongo_client:
-    db = mongo_client['NTU_data']
-    collection = db['NTU_website_data']
+    db = mongo_client['sample_restaurants']
+    collection = db['restaurants']
 
     # Read data from MongoDB into a pandas DataFrame
     cursor = collection.find({}, {"_id": 0}).limit(15) # Adjust the query/filter as needed
@@ -50,14 +50,14 @@ if mongo_client:
 
     print(f"Data loaded from MongoDB, number of records: {len(dataset_df)}")
 
-    # Create embeddings for restaurant data (e.g., description or description type)
+    # Create embeddings for restaurant data (e.g., description or cuisine type)
     embeddings = []
     for index, row in dataset_df.iterrows():
         print(f"Processing row {index + 1}/{len(dataset_df)}: {row['name']}")
-        embedding = get_embedding(row['description'])
+        embedding = get_embedding(row['cuisine'])
         embeddings.append(embedding)
 
-    dataset_df['website_data'] = embeddings
+    dataset_df['cuisine_embedding'] = embeddings
     print("Embedding generation completed")
     print(dataset_df.head())
 
@@ -74,7 +74,7 @@ if mongo_client:
 def vector_search(user_query, collection):
     """Perform a vector search in the MongoDB collection based on the user query."""
     query_embedding = get_embedding(user_query)
-    # print(f"Query embedding: {query_embedding}")
+
     if query_embedding is None:
         return "Invalid query or embedding generation failed."
 
@@ -83,24 +83,26 @@ def vector_search(user_query, collection):
             "$vectorSearch": {
                 "index": "vector_index",  # Make sure this index is created on your MongoDB collection
                 "queryVector": query_embedding,
-                "path": "website_data",
-                "numCandidates": 15,
-                "limit": 1
+                "path": "cuisine_embedding",
+                "numCandidates": 150,
+                "limit": 5
             }
         },
         {
             "$project": {
                 "_id": 0,
+                # "cuisine_embedding": 1,
                 "name": 1,
-                "description": 1,
-                "link": 1,
+                "address": 1,
+                "cuisine": 1,
+                "borough": 1,
                 "score": {
                     "$meta": "vectorSearchScore"
                 }
             }
         }
     ]
-    # print(f"Pipeline: {pipeline}")
+    print(f"Pipeline: {pipeline}")
     print(f"Collection: {collection}")
     print(f"results: {(collection.aggregate(pipeline))}")
     results = collection.aggregate(pipeline)
@@ -108,26 +110,27 @@ def vector_search(user_query, collection):
 
 def handle_user_query(query, collection):
     search_results = vector_search(query, collection)
-    print(f"Search results: {search_results}")
+
     result_str = ''
     for result in search_results:
         result_str += (
             f"Name: {result.get('name', 'N/A')}, "
-            f"Description: {result.get('description', 'N/A')}, "
-            f"Link: {result.get('link', 'N/A')}\n"
+            f"Address: {result.get('address', 'N/A')}, "
+            f"Cuisine: {result.get('cuisine', 'N/A')}, "
+            f"Borough: {result.get('borough', 'N/A')}\n"
         )
 
     completion = openai_client.chat.completions.create(
         model="gpt-3.5-turbo",
         messages=[
-            {"role": "system", "content": "You are a school assistant bot system."},
+            {"role": "system", "content": "You are a restaurant recommendation system."},
             {"role": "user", "content": "Answer this user query: " + query + " with the following context: " + result_str}
         ]
     )
 
     return completion.choices[0].message.content, result_str
 
-query = "Help me get to the school website."
+query = "Where can I find a American restaurant if I am in Queens?"
 response, source_information = handle_user_query(query, collection)
 
 print(f"Response: {response}")
