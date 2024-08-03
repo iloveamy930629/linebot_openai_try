@@ -67,7 +67,7 @@ def vector_search(user_query, collection):
     pipeline = [
         {
             "$vectorSearch": {
-                "index": "vector_index",  # Make sure this index is created on your MongoDB collection
+                "index": "v_index",  # Make sure this index is created on your MongoDB collection
                 "queryVector": query_embedding,
                 "path": "en_query _embedding",
                 "numCandidates": 30,
