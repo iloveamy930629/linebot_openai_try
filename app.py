@@ -39,6 +39,7 @@ collection = db.get_collection('restaurants')  # Replace 'your_collection_name' 
 #     # 重組回應
 #     answer = response['choices'][0]['text'].replace('。','')
 #     return answer
+
 def GPT_response(text, additional_info=None):
     # Combine the text with additional information
     if additional_info:
@@ -86,7 +87,10 @@ def handle_message(event):
         
         if restaurants:
             # Format the restaurant information
-            additional_info_text = "\n".join([f"Restaurant: {r['name']}, Address: {r['address']['borough']}" for r in restaurants])
+            additional_info_text = "\n".join([
+                f"Restaurant: {r['name']}, Cuisine: {r['cuisine']}, Address: {r['address'].get('street', 'N/A')}, Borough: {r.get('borough', 'N/A')}"
+                for r in restaurants
+            ])
         else:
             additional_info_text = 'No related restaurants found'
 
