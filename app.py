@@ -60,7 +60,7 @@ def get_embedding(text):
 def vector_search(user_query, collection):
     """Perform a vector search in the MongoDB collection based on the user query."""
     query_embedding = get_embedding(user_query)
-
+    print(f"Query embedding: {query_embedding}")
     if query_embedding is None:
         return "Invalid query or embedding generation failed."
 
@@ -94,6 +94,7 @@ def handle_user_query(query, collection):
     search_results = vector_search(query, collection)
 
     result_str = ''
+    print(f"Search results: {search_results}")
     for result in search_results:
         result_str += (
             f"Name: {result.get('name', 'N/A')}, "
@@ -103,9 +104,6 @@ def handle_user_query(query, collection):
 
     completion = openai_client.chat.completions.create(
         model="gpt-3.5-turbo",
-        # prompt=f"Answer this user query: {query} with the following context: {result_str}",
-        # temperature=0.5,
-        # max_tokens=500
         messages=[
             # {"role": "system", "content": "You are a restaurant recommendation system."},
             {"role": "user", "content": "Answer this user query: " + query + " with the following context: " + result_str}
