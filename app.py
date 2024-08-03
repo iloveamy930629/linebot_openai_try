@@ -79,7 +79,7 @@ def vector_search(user_query, collection):
                 "_id": 0,
                 "name": 1,
                 "description": 1,
-                "link": 1,
+                "link": 0,
                 "score": {
                     "$meta": "vectorSearchScore"
                 }
@@ -131,6 +131,8 @@ def handle_message(event):
     collection = db['NTU_website_data']
     try:
         response, source_information = handle_user_query(msg, collection)
+        print(f"Response: {response}")
+        print(f"Source Information:\n{source_information}")
         line_bot_api.reply_message(event.reply_token, TextSendMessage(response + '\n' + source_information))
     except:
         print(traceback.format_exc())
