@@ -38,8 +38,8 @@ mongo_uri = os.getenv('MONGODB_URI')
 mongo_client = pymongo.MongoClient(mongo_uri)
 # db = mongo_client['sample_restaurants']
 # collection = db['restaurants']
-db = mongo_client['NTU_data']
-collection = db['NTU_website_data']
+db = mongo_client['NTU_en_data']
+collection = db['NTU_en_website']
 # Ignore deprecation warnings
 warnings.filterwarnings("ignore", category=DeprecationWarning)
 
@@ -69,9 +69,9 @@ def vector_search(user_query, collection):
             "$vectorSearch": {
                 "index": "vector_index",  # Make sure this index is created on your MongoDB collection
                 "queryVector": query_embedding,
-                "path": "website_data",
+                "path": "en_query _embedding",
                 "numCandidates": 30,
-                "limit": 5
+                "limit": 3
             }
         },
         {
@@ -109,7 +109,7 @@ def handle_user_query(query, collection):
         )
 
     completion = openai_client.chat.completions.create(
-        model="gpt-3.5-turbo",
+        model="gpt-4o",
         messages=[
             # {"role": "system", "content": "You are a restaurant recommendation system."},
             {"role": "user", "content": "Answer this user query: " + query + " with the following context: " + result_str}
