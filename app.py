@@ -14,6 +14,8 @@ import datetime
 import openai
 import time
 import traceback
+
+from pymongo import MongoClient
 #======python的函數庫==========
 
 app = Flask(__name__)
@@ -25,15 +27,37 @@ handler = WebhookHandler(os.getenv('CHANNEL_SECRET'))
 # OPENAI API Key初始化設定
 openai.api_key = os.getenv('OPENAI_API_KEY')
 
+# MongoDB Connection
+mongo_client = MongoClient(os.getenv('MONGODB_URI'))
+db = mongo_client.get_database('sample_restaurants')  # Replace 'your_database_name' with your database name
+collection = db.get_collection('restaurants')  # Replace 'your_collection_name' with your collection name
 
-def GPT_response(text):
-    # 接收回應
-    response = openai.Completion.create(model="gpt-3.5-turbo-instruct", prompt=text, temperature=0.5, max_tokens=500)
+# def GPT_response(text):
+#     # 接收回應
+#     response = openai.Completion.create(model="gpt-3.5-turbo-instruct", prompt=text, temperature=0.5, max_tokens=500)
+#     print(response)
+#     # 重組回應
+#     answer = response['choices'][0]['text'].replace('。','')
+#     return answer
+def GPT_response(text, additional_info=None):
+    # Combine the text with additional information
+    if additional_info:
+        prompt = f"{text}\n\nAdditional Info:\n{additional_info}"
+    else:
+        prompt = text
+
+    # Generate response from OpenAI
+    response = openai.Completion.create(
+        model="gpt-3.5-turbo-instruct",
+        prompt=prompt,
+        temperature=0.5,
+        max_tokens=500
+    )
     print(response)
-    # 重組回應
-    answer = response['choices'][0]['text'].replace('。','')
-    return answer
 
+    # Reconstruct the response
+    answer = response['choices'][0]['text'].strip()
+    return answer
 
 # 監聽所有來自 /callback 的 Post Request
 @app.route("/callback", methods=['POST'])
@@ -54,9 +78,20 @@ def callback():
 # 處理訊息
 @handler.add(MessageEvent, message=TextMessage)
 def handle_message(event):
-    msg = event.message.text
+    msg = event.message.text.lower()
     try:
-        GPT_answer = GPT_response(msg)
+        # Search for related restaurants in MongoDB
+        query = {'cuisine': {'$regex': msg, '$options': 'i'}}  # Case-insensitive search for cuisine
+        restaurants = list(collection.find(query))
+        
+        if restaurants:
+            # Format the restaurant information
+            additional_info_text = "\n".join([f"Restaurant: {r['name']}, Address: {r['address']['borough']}" for r in restaurants])
+        else:
+            additional_info_text = 'No related restaurants found'
+
+        # Pass the additional info to the GPT_response function
+        GPT_answer = GPT_response(msg, additional_info_text)
         print(GPT_answer)
         line_bot_api.reply_message(event.reply_token, TextSendMessage(GPT_answer))
     except:
