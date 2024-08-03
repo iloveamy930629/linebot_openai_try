@@ -38,8 +38,8 @@ mongo_uri = os.getenv('MONGODB_URI')
 mongo_client = pymongo.MongoClient(mongo_uri)
 # db = mongo_client['sample_restaurants']
 # collection = db['restaurants']
-db = mongo_client['NTU_data']
-collection = db['NTU_website_data']
+db = mongo_client['NTU_en_data']
+collection = db['NTU_en_website']
 # Ignore deprecation warnings
 warnings.filterwarnings("ignore", category=DeprecationWarning)
 
@@ -68,7 +68,7 @@ def vector_search(user_query, collection):
         {
             "$vectorSearch": {
                 "index": "vector_index",  # Make sure this index is created on your MongoDB collection
-                "queryVector": query_embedding,
+                "queryVector": en_query_embedding,
                 "path": "website_data",
                 "numCandidates": 150,
                 "limit": 5
