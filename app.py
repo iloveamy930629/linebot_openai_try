@@ -43,22 +43,30 @@ collection = db.get_collection('restaurants')  # Replace 'your_collection_name' 
 def GPT_response(text, additional_info=None):
     # Combine the text with additional information
     if additional_info:
+        # 設定附加信息的最大長度
+        max_additional_info_length = 1000  # 例：限制的長度
+        if len(additional_info) > max_additional_info_length:
+            additional_info = additional_info[:max_additional_info_length] + "..."
+        
         prompt = f"{text}\n\nAdditional Info:\n{additional_info}"
     else:
         prompt = text
 
-    # Generate response from OpenAI
-    response = openai.Completion.create(
-        model="gpt-3.5-turbo-instruct",
-        prompt=prompt,
-        temperature=0.5,
-        max_tokens=500
-    )
-    print(response)
-
-    # Reconstruct the response
-    answer = response['choices'][0]['text'].strip()
-    return answer
+    try:
+        # 從 OpenAI 生成回應
+        response = openai.Completion.create(
+            model="gpt-3.5-turbo-instruct",
+            prompt=prompt,
+            temperature=0.5,
+            max_tokens=500  # 根據需要調整 max_tokens
+        )
+        print(response)
+        # 重構回應
+        answer = response['choices'][0]['text'].strip()
+        return answer
+    except openai.error.OpenAIError as e:
+        print(f"OpenAI API 錯誤: {e}")
+        return "OpenAI API 錯誤: " + str(e)
 
 # 監聽所有來自 /callback 的 Post Request
 @app.route("/callback", methods=['POST'])
