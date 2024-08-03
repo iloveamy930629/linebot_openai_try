@@ -19,7 +19,6 @@ from pymongo import MongoClient
 import pandas as pd
 import warnings
 
-
 # Load environment variables
 from dotenv import load_dotenv
 load_dotenv()
