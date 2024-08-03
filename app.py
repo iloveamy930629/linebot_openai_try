@@ -69,7 +69,7 @@ def vector_search(user_query, collection):
             "$vectorSearch": {
                 "index": "v_index",  # Make sure this index is created on your MongoDB collection
                 "queryVector": query_embedding,
-                "path": "en_query _embedding",
+                "path": "en_query_embedding",
                 "numCandidates": 30,
                 "limit": 3
             }
