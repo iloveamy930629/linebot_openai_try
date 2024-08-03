@@ -1,0 +1,267 @@
+[
+  {
+    "name": "帳號簽到退",
+    "description": "The site is related to the \"Sign In and Out\" system for National Taiwan University (國立臺灣大學). Starting from July 1, 2023, NTU has implemented a unified account sign-in and sign-out method. The online sign-in and out process must be conducted within the university's network domain and does not support wireless devices such as smartphones or tablets using the campus Wi-Fi. Staff members are required to use the physical network IP of the office domain for this process. Any falsification will be handled according to relevant regulations.\n\nSpecial provisions are mentioned for project staff who need to work off-campus regularly due to the nature of their projects; they must get special approval from the Personnel Office to sign in and out at off-campus locations. Additionally, according to labor regulations, female workers cannot be forced to work between 10 PM and 6 AM for health or other legitimate reasons, especially during pregnancy or breastfeeding.\n\nThere are different forms available for project-based staff for sign-in and out, depending on their employment status and specific scenarios.\n\nFor further questions or suggestions, users are encouraged to contact the system administrator.",
+    "link": "https://my.ntu.edu.tw/mattend/ssi.aspx"
+  },
+  {
+    "name": "研究獎助生終止系統",
+    "description": "The site provides the application procedure for terminating a research grant for students. It includes options for logging in with a single sign-on account or as an authorized assistant. The website is related to National Taiwan University and contains sections for service consultation and login credentials input. The primary contact information is for 國立臺灣大學.\n\nNational Taiwan University\nTEL: 02-3366-3366\nAddress: 10617 Taipei City, Roosevelt Road, Section 4, No. 1",
+    "link": "https://my.ntu.edu.tw/resignationProcess/studentResign/portal.aspx"
+  },
+  {
+    "name": "網路問題回報",
+    "description": "The website for the NTU Campus Network Issue Reporting System allows users to report and address problems related to the campus network at National Taiwan University (NTU). Users can submit issues they encounter while using the campus network, enabling the IT department to identify and resolve these problems efficiently. The site may include sections for submitting reports, tracking the status of existing reports, and accessing resources or FAQs for troubleshooting common network issues. For direct communication, contact information is provided, typically listing relevant personnel.\n\nContact: 王小明",
+    "link": "https://net4help.ntu.edu.tw/"
+  },
+  {
+    "name": "著作原創性檢查服務",
+    "description": "The page is from the National Taiwan University (NTU) Computer and Information Networking Center, specifically for authentication purposes. It provides links to various NTU resources such as the NTU homepage, map, calendar, and the networking center homepage. Users are directed to use the myNTU Services system, and contact information is provided for consulting services. Additionally, there are options for new undergraduate and graduate students to manage their accounts, including changing passwords and applying for accounts. For any inquiries regarding account information, users are advised to email or call the Computer and Information Networking Center.\n\nContact Name in Traditional Chinese: 計資中心",
+    "link": "https://adfs.ntu.edu.tw/oc/"
+  },
+  {
+    "name": "財物編號標籤申請及進度查詢",
+    "description": "The \"Property Number Label Application System\" is managed by the Property Management Division, Office of General Affairs, NTU. It facilitates the application and management of property number labels for new equipment and other assets.\n\n**Key Points:**\n- Users must complete a survey to help improve service quality.\n- Labels should be applied and photographed for accounting purposes.\n- Since May 1, 2020, the application for new property numbers is handled online.\n- The process involves self-labeling the equipment, taking photos, and attaching them to the increase form for reimbursement.\n\n**Labeling Instructions:**\n1. Place labels visibly on the equipment and write the property number below the label.\n2. For software, attach the label to the CD case or relevant document and take a photo.\n3. For patents, trademarks, and copyrights, attach labels to the certificate's corner and take a photo.\n\n**Photography Instructions:**\n- Photograph each labeled item showing the complete view and label position.\n- Formats for the photos can be downloaded from the Property Management Division webpage.\n\n**Contact Information:**\n- **Name**: 財物編號標籤申請系統\n\nAddress: 1st Floor, Zhan Shu Building, NTU, Roosevelt Road, Sec. 4, Da’an District, Taipei City, 10617\nPhone: 33665076 or 33665077",
+    "link": " https://property.ntu.edu.tw/"
+  },
+  {
+    "name": "付款查詢暨付款通知",
+    "description": "The website appears to be a Payment Inquiry and Notification System. It includes options for logging into the system either through a specific account or as a guest user. Users can log in by entering their account details, including a unique identifier and password. There is also an option for new users to apply for an account. \n\nNo specific contact information is provided, except the mention of \"計中帳號登入\" in Traditional Chinese.",
+    "link": "https://mis.cc.ntu.edu.tw/pay/Default.aspx"
+  },
+  {
+    "name": "專任教研人員電子聘書",
+    "description": "This website belongs to the National Taiwan University Computer and Information Networking Center's (NTU CINC) authentication page. It provides links to various NTU resources such as the NTU homepage, NTU map, NTU calendar, and FAQ. It offers services like myNTU Services and support for account-related issues. Users can change their passwords or apply for new accounts. For system-related inquiries, users are advised to contact the Consulting Service via email or telephone at 33665022.\n\nContact Name: 計資中心",
+    "link": "https://my.ntu.edu.tw/ntuhrEService/login.aspx?func=ecert"
+  },
+  {
+    "name": "臺大課程地圖",
+    "description": "The site provides a comprehensive overview of the course offerings at National Taiwan University (NTU). Courses are categorized into several main areas: General Required Courses which include subjects like Chinese, Foreign Languages, Physical Education, and Service Learning; General Education Courses covering various domains such as Literature and Arts, Historical Thinking, World Civilizations, Philosophy and Ethics, Civic Engagement and Social Analysis, Mathematical and Quantitative Analysis, Physical Sciences, and Life Sciences. Furthermore, Departmental Courses are offered across different colleges within the university such as the College of Liberal Arts, College of Science, College of Social Sciences, College of Medicine, College of Engineering, College of Bioresources and Agriculture, College of Management, and the College of Electrical Engineering & Computer Science among others.\n\nThe site also outlines the educational objectives of NTU, aiming to cultivate well-rounded individuals who possess qualities such as independent thinking, creativity, physical and mental health, effective communication, teamwork, and appreciation of aesthetics. These fundamental competencies are cultivated through NTU’s General Education and specialized programs.\n\n**Contact Information:**\n- Name in Traditional Chinese: **國立台灣大學**",
+    "link": "http://coursemap.aca.ntu.edu.tw/course_map_all/"
+  },
+  {
+    "name": "保費證明",
+    "description": "The site provides information about the 2023 Taiwan University Entrance Examination Free Application service. For the 2023 Taiwan University Entrance Exam, students can use their registered email to access the application system. Alumni can also use their previously registered email to access the system.",
+    "link": "https://mis.cc.ntu.edu.tw/tax/insure/list.asp"
+  },
+  {
+    "name": "研究計畫兼任助理學生專區",
+    "description": "The National Taiwan University Computer and Information Networking Center's certification webpage provides access to myNTU Services. Users can navigate through various helpful links including the NTU homepage, NTU map, NTU calendar, and FAQs. Additionally, there are instructions for account and password management such as changing passwords and applying for accounts. For any inquiries or issues regarding the system, users are advised to contact the Consulting Service at the provided phone number. The site specifies that undergraduate and postgraduate new students have important information regarding their accounts. \n\nFor further assistance, users can contact 計資中心.",
+    "link": "https://my.ntu.edu.tw/pm/confirmWhoami.aspx"
+  },
+  {
+    "name": "NTU Mail 服務",
+    "description": "The NTU Mail site provides information about the electronic mail system of National Taiwan University (NTU). It offers two main services:\n\n1. **NTU Exchange Mail**\n   - Targeted for faculty accounts, project and short term accounts, and enrolled students before May 2020.\n   - Provides a link to access NTU Exchange Mail and an FAQ section.\n\n2. **NTU Webmail**\n   - Targeted for students enrolled after May 2020, alumni accounts, and hospital staff accounts.\n   - Provides a link to access NTU Webmail and an FAQ section.\n\nFor assistance, the contact information includes a phone number: (02)3366-5022 or (02)3366-5023, and an email: cchelp@ntu.edu.tw.\n\n**Name in Traditional Chinese:**\n- 國立台灣大學",
+    "link": "http://ntumail.cc.ntu.edu.tw/"
+  },
+  {
+    "name": "臺大國際引水人計畫",
+    "description": "The NTU Overseas Internship Program aims to provide students from National Taiwan University (NTU) with international internship opportunities. This program includes various options such as off-campus internships, on-campus internships, and traineeships. Participants can expect a unique learning experience with global host organizations across numerous countries such as Thailand, the UK, the USA, Japan, Germany, and many more. The program also offers resources including scholarships, community support, and partnerships with leading corporations and research institutions worldwide. The application process, FAQs, and further information about the involved host organizations and partnerships can be found on the program's website.\n\nContact Person: 台灣大學",
+    "link": "https://internshipabroad.ntu.edu.tw/"
+  },
+  {
+    "name": "臺大行事曆",
+    "description": "The website for the Office of Academic Affairs at National Taiwan University (NTU) provides comprehensive information regarding various administrative segments, including the Admission Office, Registration Division, Curriculum Division, Graduate Division, Information Division, College of Medicine Division, Center for Teaching and Learning Development, and Digital Learning Center. It offers detailed descriptions about the office's responsibilities, contact details for each department, and resources for current students, faculty, administrative staff, alumni, and visitors. The site also includes academic calendars and links for further navigation.\n\nContact:\n- 教務長室\n- 教務處秘書室\n- 招生辦公室\n- 註冊組\n- 課務組\n- 研究生教務組\n- 資訊組\n- 醫學院教務分處\n- 教學發展中心與數位學習中心",
+    "link": "https://www.aca.ntu.edu.tw/w/aca/calendar"
+  },
+  {
+    "name": "資通盤點系統",
+    "description": "The site is currently undergoing maintenance and services are temporarily unavailable. \n\n**Contact Information:**\n- Name: 系統升級中\n\n",
+    "link": "https://my.ntu.edu.tw/cybersecurity"
+  },
+  {
+    "name": "校園公佈欄",
+    "description": "The site is a comprehensive bulletin board for a university, providing various announcements and notifications to its community. Categories include general, emergency, seminars, lectures, activities, job recruitment, tender notifications, vehicle towing, and notices related to H1N1 and lost and found items. Users can log in to the system, read terms of use, contact the university, or return to the main website. There are sections for different types of announcements, and users can browse through pages of notifications, with details like announcement dates and deadlines. Additionally, there are job vacancies and lost and found announcements, detailing items such as dolls, cash, and packages found around campus.\n\nContact:\n國立台灣大學",
+    "link": "https://ann.cc.ntu.edu.tw/"
+  },
+  {
+    "name": "學生成績表現追蹤",
+    "description": "The website belongs to the Computing and Information Networking Center of National Taiwan University (NTU). It offers various services including a student performance tracking system, FAQs, a message board, and links to the NTU homepage, campus map, and calendar. For system-related inquiries, users are advised to contact 鄭雅文 at 33662388-606. For account and password issues, new undergraduate and graduate students can refer to provided links for changing passwords or applying for new accounts, or contact the Computing and Information Networking Center at 33665022.",
+    "link": "https://ifweb.aca.ntu.edu.tw/ScoreTrace/Index.aspx"
+  },
+  {
+    "name": "優惠專區",
+    "description": "The site appears to be related to a booking system. There is a link provided to the National Taiwan University (NTU) Alumni website: [https://www.alumni.ntu.edu.tw/](https://www.alumni.ntu.edu.tw/). There is also mention of an event related to NTU alumni in 2023. The contact name provided in Traditional Chinese is not clearly visible or seems corrupted in the provided text.",
+    "link": "https://my.ntu.edu.tw/alumnusJobManage/myntu/sale_myntu.aspx"
+  },
+  {
+    "name": "教職員投票",
+    "description": "The Taiwan University Computer and Information Networking Center provides certification services via the myNTU platform. If users have any questions about the system, they can contact the Consulting Service at 33665022. Issues related to account and passwords, such as changing passwords or applying for an account, can be directed to the center either by email or phone.\n\nTraditional Chinese name: 計資中心",
+    "link": "https://my.ntu.edu.tw/vote/"
+  },
+  {
+    "name": "滿意度問卷調查",
+    "description": "The website belongs to the Computing and Information Networking Center of National Taiwan University (NTU). It provides authentication services for myNTU Services. Users can find links to the NTU homepage, map, calendar, center homepage, FAQs, and a message board. If users have any questions regarding the system, they are instructed to contact 33665022 for assistance, or reach out to the management under the Consulting Service.\n\nImportant information about accounts includes specific guidance for new undergraduate and graduate students. Options to change the password or apply for a new account are available. For further assistance with account services, users can contact the center via phone.\n\nContact Name: 計資中心",
+    "link": "https://my.ntu.edu.tw/questionnaire/Login.aspx"
+  },
+  {
+    "name": "臺大國際引路人計畫",
+    "description": "The 2024 NTU International Mentorship Program (IMP) is designed for international students at National Taiwan University (NTU). This program aims to bridge the gap between students and opportunities in Taiwan by offering mentorship and internships in various sectors, including government, corporations, non-profits, and research institutions. Students can expect to gain practical experience, network with professionals, and receive guidance to help them navigate their career paths.\n\nThe program includes application processes, expectations, FAQs, and a login portal for participants. It features news updates, partnerships, and sponsorship opportunities. Students will benefit from activities like corporate and cultural visits, workshops, and seminars to enhance both their professional skills and cultural understanding.\n\nFor additional information, Dr. Hsiao-Wei Yuan serves as the Vice President for International Affairs, National Taiwan University (臺大國際事務副校長).",
+    "link": "https://oiainternship.ntu.edu.tw/"
+  },
+  {
+    "name": "短期人員經費管理系統-申請",
+    "description": "The website belongs to the Computer and Information Networking Center at National Taiwan University (NTU). It appears to be a certification and authentication page for NTU's myNTU Services. The site includes links to various NTU resources such as the homepage, campus map, and academic calendar. It provides options for managing account-related tasks like changing passwords and applying for accounts. Visitors with questions are encouraged to contact the Consulting Service either by email or phone.\n\nContact Name (Traditional Chinese): 計資中心",
+    "link": "https://my.ntu.edu.tw/shortTermNTuer/login.aspx"
+  },
+  {
+    "name": "領域專長查詢系統",
+    "description": "The NTU Domain Expertise system offers a structured approach to cultivating students' core competencies across various fields, emphasizing interdisciplinary and innovative trends. Designed primarily for undergraduate students, the program features modular courses grouped around central themes, allowing for directed exploration without the need for prior application. Course modules are interlinked and categorized into basics, theories, methods, and capstones. Upon graduation, students receive a certificate of domain expertise as academic proof.\n\nStudents can begin by exploring “themes” or “courses” of interest and check personal course progress via account login. Information updates align with NTU’s course network each semester. No pre-application is required for courses, but selection follows normal enrollment processes and regulations. Courses from all departments may count towards domain expertise, subject to prerequisites and availability.\n\nFor detailed queries, students are encouraged to check FAQs and videos available on the system page.\n\nContact Name in Traditional Chinese: 承辦人",
+    "link": "https://specom.aca.ntu.edu.tw/"
+  },
+  {
+    "name": "期末教學意見院長審閱及主管查詢",
+    "description": "The page is part of the Taiwan University Computer and Information Network Center, specifically for their Authentication System. It includes links to the university's homepage, campus map, calendar, network center homepage, and a FAQ section, along with a message board. \n\nThe main focus is on the Teaching Feedback System. For related inquiries, users can contact 曾俊綺 by email or phone at 33662388-302. \n\nThe page also provides information on managing account credentials for both undergraduate and graduate students, including links to change passwords and apply for accounts. For any questions regarding account passwords, users are encouraged to contact the Computing and Information Networking Center directly at 33665022.",
+    "link": "https://investea.aca.ntu.edu.tw/opinion/login.asp"
+  },
+  {
+    "name": "職務宿舍繳費證明",
+    "description": "The site mentions the 112th year exam admission guidelines and scoring methods for the Civil Service Special Examination. It also provides EMail communication for queries.\n\nContact name in Traditional Chinese: \n±ÐÂ¾",
+    "link": "https://mis.cc.ntu.edu.tw/tax/rental/"
+  },
+  {
+    "name": "最新消息",
+    "description": "The website appears to be a campus bulletin board used for various announcements at a university. It includes different types of announcements such as general information, urgent notices, seminars, lectures, events, job opportunities, lost and found items, and procurement bids. Announcements are categorized for easy access, and users can log into the system using their credentials.\n\nRecent announcements include registration deadlines for language courses, temporary phone line disruptions, opportunities for staff training, and recruitment advertisements for teaching assistants and research assistants in various departments. The platform also provides updates on procurement results and notable activities within the university.\n\nFor lost and found items, the site maintains a list of recently found objects, which includes various personal belongings found in different campus locations. \n\nOnly the name provided in the contact information is: 國立臺灣大學.",
+    "link": "https://ann.cc.ntu.edu.tw/"
+  },
+  {
+    "name": "計中首頁",
+    "description": "The website is the homepage for the National Taiwan University's Computing and Information Networking Center. It provides essential information regarding the center's services, including network security alerts, pandemic response updates, campus announcements, and center newsletters. The site offers detailed sections on the center's history, services, organization, and resources, as well as information on various administrative offices and academic research. It also provides links to online services such as e-learning, network resources, and commonly used forms and FAQs. \n\nKey features include news updates on cybersecurity threats, IT services, and educational resources. The site also hosts information about the university's significant internet-related technical advancements and safety protocols. Additionally, visitors can find contact points for the center, legal regulations, and data forms relevant to the center's operations. \n\nContact Name: 國立臺灣大學計算機及資訊網路中心",
+    "link": "https://www.cc.ntu.edu.tw/"
+  },
+  {
+    "name": "網路選課1",
+    "description": "The National Taiwan University (NTU) course selection system document for the 113th academic year's first semester outlines various procedures and important dates for course registration, add/drop processes, and other related activities. Key dates include multiple phases for initial course selection, with specific open and close times, as well as detailed add/drop schedules. Students are advised to refer to the platform for result queries after each selection phase.\n\nImportant instructions and overviews for online course registration, specific guidelines for English courses (including freshman English and advanced English for graduate students), and a special note on the pre-course foreign language proficiency survey are included. Additionally, there are details about subscribing to courses within the NTU system and the incentive program for EMI (English as Medium of Instruction) courses.\n\nFor inquiries related to course selection, contact information is provided under different departments. Notably, telephone contact numbers for \"選課業務聯絡電話表\" are listed to assist students with inquiries.\n\nContact Details:\n- 註冊組: (Please refer to the linked \"選課業務聯絡電話表\")\n- 研教組: (02)33662388 ext. 402, 403, 408-412, 415, 416\n- 醫教分處: (02)23123456 ext. 288024, 288025, 288027",
+    "link": "https://if192.aca.ntu.edu.tw/"
+  },
+  {
+    "name": "總務處會議室系統",
+    "description": "The NTU General Affairs Office Meeting Room Management System allows staff members to manage and book meeting rooms within the university. Users must log in with their personal account from the university's Computing and Information Networking Center, as unit public accounts are not accepted. The system generates and prints application forms, which must be filled out, approved by the unit supervisor, and submitted to the General Affairs Office's Affairs Section. Administrative units using the third meeting room during office hours do not need to submit a paper application form to the Affairs Section. The system includes features like date inquiry, meeting room inquiry, booking registration, and instructions. For operational or business-related issues, contact 劉鎧維, and for system-related problems, contact 洪嘉駿.\n\nCopyright © 2024 National Taiwan University All Rights Reserved.",
+    "link": "https://my.ntu.edu.tw/confr/"
+  },
+  {
+    "name": "臺大新課程網",
+    "description": "The NTU Curriculum Network provides detailed course information for National Taiwan University students and faculty. The site includes sections for official course enrollment, the latest announcements, a help center, and various instructional categories such as general education, physical education, and specialized fields. Users can search for courses by name, instructor, or course ID. The site outlines the entire course selection process for the first semester of the 113th academic year, including pre-selection phases, results announcement dates, add/drop periods, and special situation approvals. The site emphasizes important dates and deadlines, ensuring students can track and manage their course enrollments efficiently.\n\n**Contact Information:**\n- Name: 國立臺灣大學",
+    "link": "https://course.ntu.edu.tw/"
+  },
+  {
+    "name": "學雜分費繳費及證明",
+    "description": "The National Taiwan University website provides detailed information regarding tuition and fee payments for students. Key features include:\n\n1. **System Functions**: Students can download and print their billing statements, check payment statuses, and print receipts for both current and previous semesters.\n2. **Payment Deadlines**: Various deadlines for different academic periods are provided, ensuring students are aware of when to pay their tuition and fees.\n3. **Guidance for Special Programs**: Information about additional payments for students in the Teacher's Education program, Biotechnology program, language practicum courses, and those extending their study terms.\n4. **Guidelines for Tuition Payment**: Detailed instructions are provided for undergraduate students who extend their study term, explaining payment stages before and after the start of the academic year.\n5. **Regulations**: According to NTU's academic policies, those who fail to pay tuition on time will be considered unregistered and may be ordered to withdraw.\n\nAdditionally, the site highlights that the system is designed by the Computer and Information Networking Center (C&INC).\n\n**Name in Traditional Chinese**: ¾ÇÂø¶O¤Î¾Ç¤À¶OÃº¶O©ú²Ó",
+    "link": "https://mis.cc.ntu.edu.tw/reg/"
+  },
+  {
+    "name": "活動報名",
+    "description": "The site is the event registration system for National Taiwan University (NTU). It supports login for NTU members using their university account and offers account assistance such as password changes and new account applications. If there are issues with login credentials, users can contact the NTU Computer & Information Networking Center for help via phone or email. The site also facilitates registrations for various activities, providing a summary of upcoming events such as workshops, courses, seminars, and other activities. \n\nFor contact:\n電話：(02)3366-5022 or (02)3366-5023",
+    "link": "https://my.ntu.edu.tw/actregister/Default.aspx"
+  },
+  {
+    "name": "學生聘僱查詢系統",
+    "description": "The NTU Student Hired Information Query System is a platform designed to provide integrated information regarding student employment. It allows users to query various details about student employment positions, excluding information related to \"Living and Study Assistant Scholarships\" or \"Research Student Scholarships—Research Assistance Fund (non-working).\" For such information, users should utilize the Student Affairs Office's Financial Aid Unit (FAO) system. The platform also excludes certain positions within departments such as the College of Medicine, the Graduate Institutes of Molecular and Comparative Pathology, among others.\n\nContact Information:\n- **意見信箱** (Comments Mailbox on Ord): ordrpa@ntu.edu.tw, (02)3366-3268\n- **意見信箱** (Comments Mailbox on Aca): yanyi@ntu.edu.tw, (02)3366-2388\n- **意見信箱** (Comments Mailbox on Osa): advisory@ntu.edu.tw, (02)3366-2048~52\n- **問題回報** (Comments Mailbox on CC): juliachen@ntu.edu.tw, (02)3366-5523\n\n© 2022 National Taiwan University. All rights reserved.",
+    "link": "https://my.ntu.edu.tw/StuHireInfoQuery/index.html"
+  },
+  {
+    "name": "校務建言",
+    "description": "The site introduces a comprehensive statistical database platform, aimed at enhancing the statistical knowledge and development of Taiwan. It emphasizes the importance of accurate statistical data in various fields and explains that the platform is accessible to the public for educational and research purposes. The database is supported by advanced technology to ensure precise and reliable information, providing significant data for analysis and decision-making processes.\n\nFor inquiries, you can contact:\n**Ápµ¸**",
+    "link": "https://my.ntu.edu.tw/suggest/index.asp"
+  },
+  {
+    "name": "畢業生離校手續查詢",
+    "description": "The Taiwan University Computer and Information Networking Center authentication webpage provides access to myNTU Services. For any inquiries related to the system or account issues, users are advised to contact the consulting service at phone number 33665022. Other resources include links to the main NTU homepage, NTU map, NTU calendar, and a FAQ section. Users can also change their passwords or apply for new accounts. For any questions regarding accounts and passwords, one should contact **計資中心** or call the same number provided.\n\n",
+    "link": "https://my.ntu.edu.tw/StudLeave/Login.aspx"
+  },
+  {
+    "name": "ePo 學習歷程檔",
+    "description": "NTU ePortfolio is an online platform provided by National Taiwan University. The site functions as a tool for students to complete various surveys and evaluations related to their courses and teaching feedback at different times during the academic year. This system ensures that students' opinions are gathered periodically, including mid-term and end-term feedback.\n\nRecent updates include notifications for students to submit their teaching feedback surveys within specified dates for different academic terms. There is also an advisory regarding a temporary service outage for maintenance.\n\nThe site is maintained by the ePortfolio Workgroup at NTU, and it is optimized for viewing at a resolution of 1024 x 768 pixels.\n\nContact Information:\n- National Taiwan University\n- No. 1, Sec. 4, Roosevelt Road, Taipei, 10617 Taiwan\n- Phone: +886-2-3366-2388 ext. 614\n- Fax: +886-2-2366-1621",
+    "link": "https://if163.aca.ntu.edu.tw/eportfolio/"
+  },
+  {
+    "name": "聯絡我們",
+    "description": "The website for National Taiwan University (NTU) offers detailed information about the university. It includes sections such as campus maps, administrative structure, history, academic programs, research opportunities, and admissions details. The university provides contact details for various departments and offers support for students, faculty, and international admissions.\n\nFor admissions inquiries, the contact points are:\n1. Graduate Admissions: (02) 33662388#407, email: wangjoy@ntu.edu.tw (Wáng Ruò)\n2. Undergraduate Admissions: (02) 33662388#202, email: weiwei@ntu.edu.tw (Wèi Wèi)\n3. International Students: +886-2-3366-2007, email: intadmission@ntu.edu.tw\n\nFor administrative quality concerns, email: secretariat@ntu.edu.tw\n\nFor technical support, contact the IT support center via Tel: (02)3366-5022 or (02)3366-5023, or email: cchelp@ntu.edu.tw\n\nFor website-related questions or comments, contact the web administrator.\n\nFurther details about campus news, events, and academic calendars can be found on the site. NTU ensures adherence to privacy and information security policies.\n\nCopyright © 2023. National Taiwan University.",
+    "link": "https://www.ntu.edu.tw/contact.html"
+  },
+  {
+    "name": "教師彈性薪資查詢",
+    "description": "The site is the authentication page for the Computing and Information Networking Center of National Taiwan University (NTU). It provides access to myNTU Services and offers links to the NTU homepage, campus map, calendar, and FAQs. Users are required to log in with a username and password, with separate sections for new undergraduate and graduate students. Assistance for account-related issues, including password changes and account applications, is available. For any questions or concerns, users are advised to contact the Computing and Information Networking Center by email or phone.\n\nContact Name: 計資中心",
+    "link": "https://my.ntu.edu.tw/ntuhrEService/hrQuery/MeritPay.aspx?func=military"
+  },
+  {
+    "name": "校園傳染病管制網",
+    "description": "The site is the Epidemic Prevention Portal for National Taiwan University (NTU). It provides crucial information and resources regarding campus epidemic control, including:\n\n1. **Epidemic Prevention News**: Latest updates on epidemic prevention.\n2. **Reporting Confirmed Cases**: System for reporting confirmed cases.\n3. **Reporting System for Personnel Entering Taiwan**: For managing entries into Taiwan.\n4. **Reporting System for Health Management on Campus**: Managing health information of contacts of confirmed cases.\n5. **Contact Person in Pandemic**: Contact points during a pandemic.\n6. **Download Section**: Resources and forms for download.\n\nFor more information, you can contact:\n- 02-3366-2175 (李醫師)\n- 02-3366-2156 (池醫師)\n- Email: seanchih@ntu.edu.tw\n\nThe site is designed by the Program Development Team, NTU Computer and Information Networking Center.",
+    "link": "https://my.ntu.edu.tw/ntuwdc/"
+  },
+  {
+    "name": "門禁管理",
+    "description": "The site provides information about the National Taiwan University's campus access management system. Users are advised to log in and use the system with a display resolution of 1280x1024 and browsers like IE 10 or above, Chrome, Edge, Safari, or Firefox. Passwords must be at least 8 characters long, including both letters and numbers. Upon logging in, users are required to change their passwords. If the password is entered incorrectly five times, the account will be locked. For issues, users can contact service by phone or email.\n\nContact Information:\n- Customer Service Phone: 02-2931-7413\n- Customer Service Email: service@websystem.com.tw\n\nManual download available through right-click and \"Save As\" on the link.",
+    "link": "http://acs.cc.ntu.edu.tw/NTUAcs/_defaut.aspx"
+  },
+  {
+    "name": "海外教育博覽會",
+    "description": "The STUDY ABROAD EXPO hosted by National Taiwan University (臺大) offers students information and opportunities regarding studying abroad. It includes various resources and sessions to help students learn about different international programs, application procedures, and life in foreign countries. The expo features representatives from various universities and organizations, providing firsthand information and answering students' queries. Workshops, seminars, and networking events are organized to aid students in making informed decisions about their international education prospects.",
+    "link": "https://studyabroadexpo.ntu.edu.tw"
+  },
+  {
+    "name": "海外教育資訊網",
+    "description": "The NTU Study Abroad site, managed by National Taiwan University, provides comprehensive information about international exchange programs, summer/winter courses, dual degree opportunities, student advising, and overseas internships. The website supports students in planning and applying for study abroad opportunities, including detailed guides on application procedures, scholarship information, and necessary preparations. Additionally, the site features upcoming events, registration timelines, and program overviews to help students make informed decisions about their educational journeys abroad. For student queries and support, the NTU Study Abroad team offers personalized contact options based on region and program type. The site also shares success stories and experiences of previous exchange students to inspire and guide prospective applicants.\n\nContact person: Jeffrey Huang (Traditional Chinese: 黃杰瑞)",
+    "link": "https://studyabroad.ntu.edu.tw"
+  },
+  {
+    "name": "成績與名次查詢及探索學分申請",
+    "description": "The website is for the Computational and Information Networking Center at National Taiwan University. It provides access to the academic records and grade inquiry system along with the credit application system. For any queries regarding the system, users can contact the administrator 藍雅環 via email or phone at 33662388-206. The site also offers information on account and password management for new undergraduate and graduate students. For further account-related queries, users can contact the IT center or call 33665022.",
+    "link": "https://if190.aca.ntu.edu.tw/graderanking/index"
+  },
+  {
+    "name": "臺大首頁",
+    "description": "The National Taiwan University (NTU) website provides comprehensive information about the institution, including its history, administrative structure, and various academic and research programs. It features details about campus life, including transportation, accommodation, and student resources. The site highlights NTU's research achievements, international collaboration, and notable events. It also provides access to digital resources like the library and government research information database (GRB), showcases recent news and announcements about campus activities, and offers virtual tours. Prospective students can find application information and current students can access various online services. The site also includes links to NTU's academic offerings, interdisciplinary research initiatives, and extension programs such as EMBA. The contact section lists telephone and fax numbers for reaching various departments within the university. \n\nContact Information (in Traditional Chinese):\n- åç«èºç£å¤§å­¸",
+    "link": "https://www.ntu.edu.tw/"
+  },
+  {
+    "name": "學籍資料查詢及下載",
+    "description": "The website is a certification page for the Computing and Information Networking Center at National Taiwan University (NTU). It offers access to a student status inquiry and download system. If users have any questions about the system, they can contact the administrator 胡慧玲 at 33662388-205. The site also provides information on account management, including changing passwords and applying for new accounts. For any account or password-related issues, users are advised to contact the information center at 33665022.",
+    "link": "https://if190.aca.ntu.edu.tw/StuInfo/StudentInfo/NTULogin"
+  },
+  {
+    "name": "成績與名次查詢",
+    "description": "The website appears to be primarily in Chinese, likely Traditional Chinese based on the characters provided. However, the text provided does not give enough information about the site's content, purpose, or offerings. Without more context or additional sections of the site, it is challenging to provide a detailed summary. From what is visible, there is no specific contact information mentioned. If you can provide more text or a specific section of the site, I'd be able to offer a more detailed summary.\n\nName in Traditional Chinese: This information is not available from the provided text.",
+    "link": "https://ifsel3.aca.ntu.edu.tw/hissco/index.asp"
+  },
+  {
+    "name": "修繕申請",
+    "description": "The NTU Repair Service website facilitates repair requests and management at National Taiwan University. Users can log in, select repair types, and apply for repairs. During the pandemic, contractors must follow campus access control rules, notify the repair management team, and comply with facility-specific COVID-19 regulations. The site outlines repair procedures, financial aid principles, and recommends using browsers like Microsoft Edge, Google Chrome, or Firefox. \n\nFor general repairs, contact 許育荏. For dormitory repair issues, contact 王丞偉. For system-related concerns, contact 洪嘉駿.",
+    "link": "https://my.ntu.edu.tw/repairservice2/"
+  },
+  {
+    "name": "臺大課程網",
+    "description": "NTU Online (臺大課程網) is the official platform for online courses offered by National Taiwan University. The website provides a variety of courses across different disciplines, allowing students and learners to access educational resources and remote learning opportunities. It features course catalogs, enrollment information, and learning materials to support academic growth. The platform is designed to cater to the educational needs of both local and international students, offering a convenient way to pursue knowledge and enhance skills through digital learning tools.\n\nContact Name: [Not specified]",
+    "link": "https://nol.ntu.edu.tw/nol/guest/index.php"
+  },
+  {
+    "name": "中英文網站製作平台",
+    "description": "The National Taiwan University (NTU) Chinese-English Website Production Platform provides a versatile service for NTU departments, allowing them to create and manage multilingual websites. The platform offers ten different templates that cater to various needs, such as departmental announcements, event highlights, conference registrations, and academic publications. Users can choose from vertical or horizontal layouts and various color schemes like red, green, or brown.\n\nKey features include:\n- Photo albums for image collections.\n- News modules for text or multimedia announcements.\n- Link modules for setting up hyperlink directories.\n- Video modules for embedding YouTube videos.\n- Large image sliders for highlighting important announcements.\n- Customizable text and image blocks.\n- Tabbed interfaces for organizing complex information.\n- Additional tools for calendars, weather forecasts, and other website functionalities.\n\nThe platform's process involves selecting a template, building the website, downloading the package, and finalizing the setup. It also offers support functions like educational training, consultation services, and a comprehensive FAQ section. \n\nContact information:\n- 黃淑玲\n- 黃瀞瑩",
+    "link": "https://webpageprod.ntu.edu.tw/"
+  },
+  {
+    "name": "本校生校際選課系統",
+    "description": "The website is the authentication page for the National Taiwan University (NTU) Computer and Information Networking Center. It includes links to the NTU homepage, map, calendar, and the center's homepage. This particular system is for inter-university course selection applications. \n\nFor any inquiries regarding this system, contact 陈芳瑤 or 车台莉 at 33662388-204, 402. For account or password issues, new students can change their password or apply for an account. For further assistance, contact the Computing Information Center at 33665022.",
+    "link": "https://if177.aca.ntu.edu.tw/SelCou_Oschool/login.asp"
+  },
+  {
+    "name": "出國旅費E化結報系統",
+    "description": "The website is the authentication page for the Computer and Information Networking Center (CINC) at National Taiwan University (NTU). It offers services like myNTU, and users can manage their accounts and passwords. There are links to the NTU homepage, map, calendar, CINC homepage, FAQs, and a message board. For any questions related to system use or account issues, users are advised to contact the Consulting Service.\n\nName in Traditional Chinese: 計資中心",
+    "link": "https://my.ntu.edu.tw/acc/TripReport"
+  },
+  {
+    "name": "NTU COOL 數位教學平臺",
+    "description": "NTU COOL is an online learning platform designed for students and educators. The site requires JavaScript to be enabled and is not accessible via some browsers. For optimal performance, it recommends using Chrome, Firefox, Safari, or Edge. The platform allows users to access their courses and engage with educational materials. For further assistance, users might need to contact site support, though no direct contact information is provided here.\n\nName in Traditional Chinese: Not provided.",
+    "link": "https://cool.ntu.edu.tw"
+  },
+  {
+    "name": "公文系統",
+    "description": "The Documentation Division of the Office of General Affairs at National Taiwan University (NTU) handles various administrative tasks related to documents, including receiving and dispatching mail, archiving records, and managing official documents. The division provides guidelines on drafting official documents and offers downloadable templates for common university documents. It also oversees the implementation of the university's electronic document system, which as of June 19, 2023, requires off-campus users to connect via NTU's Virtual Private Network (VPN) for security compliance.\n\nContact information (Traditional Chinese name only):\n吳志宏\n\nFor further details, the Documentation Division can be visited at the Main Campus Administrative Building, Room 308, or via the contact provided on their page.",
+    "link": "https://ndoc.ntu.edu.tw/ifdportal_ntu/"
+  },
+  {
+    "name": "臺大電子報",
+    "description": "The NTU ePaper platform provides a variety of newsletters from National Taiwan University (NTU), including topics such as language learning, libraries, lifestyle, alumni updates, indigenous studies, medicine, career services, and more. Subscribers can manage their preferences, subscribe to new newsletters, or unsubscribe from existing ones. The site is managed and maintained by NTU's Computer and Information Networking Center, and each newsletter's content is the responsibility of its issuer. \n\nContact: 聯絡我們\n\nWebsite: [NTU ePaper](https://epaper.ntu.edu.tw/)",
+    "link": "https://epaper.ntu.edu.tw/"
+  }
+]
