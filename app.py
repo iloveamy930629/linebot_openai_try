@@ -131,7 +131,7 @@ def handle_message(event):
     collection = db['NTU_website_data']
     try:
         response, source_information = handle_user_query(msg, collection)
-        line_bot_api.reply_message(event.reply_token, TextSendMessage(response))
+        line_bot_api.reply_message(event.reply_token, TextSendMessage(response + '\n' + source_information))
     except:
         print(traceback.format_exc())
         line_bot_api.reply_message(event.reply_token, TextSendMessage('An error occurred. Please try again later.'))
