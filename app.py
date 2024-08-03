@@ -38,7 +38,8 @@ mongo_uri = os.getenv('MONGODB_URI')
 mongo_client = pymongo.MongoClient(mongo_uri)
 db = mongo_client['sample_restaurants']
 collection = db['restaurants']
-
+# db = mongo_client['NTU_data']
+# collection = db['NTU_website_data']
 # Ignore deprecation warnings
 warnings.filterwarnings("ignore", category=DeprecationWarning)
 
@@ -56,7 +57,7 @@ def get_embedding(text):
         print(f"Error in get_embedding: {e}")
         return None
 
-def vector_search(user_query):
+def vector_search(user_query, collection):
     """Perform a vector search in the MongoDB collection based on the user query."""
     query_embedding = get_embedding(user_query)
 
@@ -90,8 +91,8 @@ def vector_search(user_query):
     results = collection.aggregate(pipeline)
     return list(results)
 
-def handle_user_query(query):
-    search_results = vector_search(query)
+def handle_user_query(query, collection):
+    search_results = vector_search(query, collection)
 
     result_str = ''
     for result in search_results:
@@ -104,9 +105,13 @@ def handle_user_query(query):
 
     completion = openai_client.chat.completions.create(
         model="gpt-3.5-turbo",
-        prompt=f"Answer this user query: {query} with the following context: {result_str}",
-        temperature=0.5,
-        max_tokens=500
+        # prompt=f"Answer this user query: {query} with the following context: {result_str}",
+        # temperature=0.5,
+        # max_tokens=500
+        messages=[
+            # {"role": "system", "content": "You are a restaurant recommendation system."},
+            {"role": "user", "content": "Answer this user query: " + query + " with the following context: " + result_str}
+        ]
     )
 
     return completion.choices[0].text.strip(), result_str
@@ -125,8 +130,9 @@ def callback():
 @handler.add(MessageEvent, message=TextMessage)
 def handle_message(event):
     msg = event.message.text.lower()
+    # collection = db['NTU_website_data']
     try:
-        response, source_information = handle_user_query(msg)
+        response, source_information = handle_user_query(msg, collection)
         line_bot_api.reply_message(event.reply_token, TextSendMessage(response))
     except:
         print(traceback.format_exc())
@@ -142,7 +148,7 @@ def welcome(event):
     gid = event.source.group_id
     profile = line_bot_api.get_group_member_profile(gid, uid)
     name = profile.display_name
-    message = TextSendMessage(text=f'{name} has joined the group.')
+    message = TextSendMessage(text=f'{name}歡迎加入')
     line_bot_api.reply_message(event.reply_token, message)
 
 if __name__ == "__main__":
