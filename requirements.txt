@@ -3,5 +3,5 @@ flask
 openai >= 1.0.0
 gunicorn
 pymongo[srv]==3.12.1
-
+pandas
 
