@@ -107,16 +107,25 @@ def handle_user_query(query, collection):
             f"Description: {result.get('description', 'N/A')}, "
             f"Link: {result.get('link', 'N/A')}\n"
         )
-
+    detailed_response = f"Answer this user query: {query} with the following context: {result_str}"
     completion = openai_client.chat.completions.create(
         model="gpt-4o",
         messages=[
-            # {"role": "system", "content": "You are a restaurant recommendation system."},
-            {"role": "user", "content": "Answer this user query: " + query + " with the following context: " + result_str}
+            {"role": "system", "content": "You are a NTU assistant bot system."},
+            {"role": "user", "content": detailed_response}
         ]
     )
 
     return completion.choices[0].message.content, result_str
+
+def summarize_text(text):
+    summary_completion = openai_client.chat.completions.create(
+        model="gpt-4o",
+        messages=[{"role": "user", "content": f"Summarize the following text to only the key points:\n\n{text}"}]
+    )
+
+    return summary_completion.choices[0].message.content
+
 
 @app.route("/callback", methods=['POST'])
 def callback():
@@ -137,7 +146,8 @@ def handle_message(event):
         response, source_information = handle_user_query(msg, collection)
         print(f"Response: {response}")
         print(f"Source Information:\n{source_information}")
-        line_bot_api.reply_message(event.reply_token, TextSendMessage(response + '\n' + source_information))
+        summarized_response = summarize_text(response)
+        line_bot_api.reply_message(event.reply_token, TextSendMessage(summarized_response))
     except:
         print(traceback.format_exc())
         line_bot_api.reply_message(event.reply_token, TextSendMessage('An error occurred. Please try again later.'))
