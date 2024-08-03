@@ -18,6 +18,7 @@ import traceback
 from pymongo import MongoClient
 #======python的函數庫==========
 
+
 app = Flask(__name__)
 static_tmp_path = os.path.join(os.path.dirname(__file__), 'static', 'tmp')
 # Channel Access Token
@@ -42,7 +43,7 @@ collection = db.get_collection('restaurants')  # Replace 'your_collection_name' 
 
 def GPT_response(text, additional_info=None):
     # Combine the text with additional information
-    if additional_info:
+    if additional_info: 
         # 設定附加信息的最大長度
         max_additional_info_length = 1000  # 例：限制的長度
         if len(additional_info) > max_additional_info_length:
