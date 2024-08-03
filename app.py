@@ -114,7 +114,7 @@ def handle_user_query(query, collection):
         ]
     )
 
-    return completion.choices[0].text.strip(), result_str
+    return completion.choices[0].message.content, result_str
 
 @app.route("/callback", methods=['POST'])
 def callback():
