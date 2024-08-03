@@ -36,10 +36,10 @@ openai_client = OpenAI(api_key=os.getenv('OPENAI_API_KEY'))
 # MongoDB connection
 mongo_uri = os.getenv('MONGODB_URI')
 mongo_client = pymongo.MongoClient(mongo_uri)
-db = mongo_client['sample_restaurants']
-collection = db['restaurants']
-# db = mongo_client['NTU_data']
-# collection = db['NTU_website_data']
+# db = mongo_client['sample_restaurants']
+# collection = db['restaurants']
+db = mongo_client['NTU_data']
+collection = db['NTU_website_data']
 # Ignore deprecation warnings
 warnings.filterwarnings("ignore", category=DeprecationWarning)
 
@@ -69,7 +69,7 @@ def vector_search(user_query, collection):
             "$vectorSearch": {
                 "index": "vector_index",  # Make sure this index is created on your MongoDB collection
                 "queryVector": query_embedding,
-                "path": "cuisine_embedding",
+                "path": "website_data",
                 "numCandidates": 150,
                 "limit": 5
             }
@@ -78,9 +78,8 @@ def vector_search(user_query, collection):
             "$project": {
                 "_id": 0,
                 "name": 1,
-                "address": 1,
-                "cuisine": 1,
-                "borough": 1,
+                "description": 1,
+                "link": 1,
                 "score": {
                     "$meta": "vectorSearchScore"
                 }
@@ -98,9 +97,8 @@ def handle_user_query(query, collection):
     for result in search_results:
         result_str += (
             f"Name: {result.get('name', 'N/A')}, "
-            f"Address: {result.get('address', 'N/A')}, "
-            f"Cuisine: {result.get('cuisine', 'N/A')}, "
-            f"Borough: {result.get('borough', 'N/A')}\n"
+            f"Description: {result.get('description', 'N/A')}, "
+            f"Link: {result.get('link', 'N/A')}\n"
         )
 
     completion = openai_client.chat.completions.create(
