@@ -152,7 +152,7 @@ def callback():
 @handler.add(MessageEvent, message=TextMessage)
 def handle_message(event):
     msg = event.message.text.lower()
-    collection = db['website_data']
+    collection = db['NTU_website_data']
     try:
         response, source_information = handle_user_query(msg, collection)
         print(f"Response: {response}")
