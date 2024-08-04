@@ -118,7 +118,7 @@ def handle_user_query(query, collection):
             f"Description: {result.get('description', 'N/A')}, "
             f"Link: {result.get('link', 'N/A')}\n"
         )
-    detailed_response = f"Answer this user query: {query} with the following context: {result_str}"
+    detailed_response = f"User query: {query}\n\nContext:\n{result_str}\nPlease provide a concise and relevant response to the user's query, try your best to help the user, including any related links from the context."
     completion = openai_client.chat.completions.create(
         model="gpt-3.5-turbo",
         messages=[
@@ -132,7 +132,7 @@ def handle_user_query(query, collection):
 def summarize_text(text):
     summary_completion = openai_client.chat.completions.create(
         model="gpt-3.5-turbo",
-        messages=[{"role": "user", "content": f"Summarize the following text to only the key points:\n\n{text}"}]
+        messages=[{"role": "user", "content": f"Summarize the following text to only the key points:\n\n{text}, remember to keep the necessary link but don't print many long’s contact details"}]
     )
 
     return summary_completion.choices[0].message.content
