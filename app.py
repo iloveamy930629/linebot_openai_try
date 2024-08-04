@@ -38,8 +38,8 @@ mongo_uri = os.getenv('MONGODB_URI')
 mongo_client = pymongo.MongoClient(mongo_uri)
 # db = mongo_client['sample_restaurants']
 # collection = db['restaurants']
-db = mongo_client['NTU_en_data']
-collection = db['NTU_en_website']
+db = mongo_client['NTU_data']
+collection = db['NTU_website_data']
 # Ignore deprecation warnings
 warnings.filterwarnings("ignore", category=DeprecationWarning)
 
@@ -67,9 +67,9 @@ def vector_search(user_query, collection):
     pipeline = [
         {
             "$vectorSearch": {
-                "index": "v_index",  # Make sure this index is created on your MongoDB collection
+                "index": "vector_index",  # Make sure this index is created on your MongoDB collection
                 "queryVector": query_embedding,
-                "path": "en_query_embedding",
+                "path": "website_data",
                 "numCandidates": 30,
                 "limit": 3
             }
@@ -95,10 +95,21 @@ def vector_search(user_query, collection):
     except Exception as e:
         print(f"Error in vector_search: {e}")
         return []
+    
+def remove_duplicate_urls(results):
+    seen_urls = set()
+    unique_results = []
+    for result in results:
+        url = result.get('link')
+        if url not in seen_urls:
+            seen_urls.add(url)
+            unique_results.append(result)
+    return unique_results
 
 def handle_user_query(query, collection):
     search_results = vector_search(query, collection)
-
+    unique_results = remove_duplicate_urls(search_results)
+    
     result_str = ''
     print(f"Search results: {search_results}")
     for result in search_results:
@@ -141,7 +152,7 @@ def callback():
 @handler.add(MessageEvent, message=TextMessage)
 def handle_message(event):
     msg = event.message.text.lower()
-    collection = db['NTU_en_website']
+    collection = db['website_data']
     try:
         response, source_information = handle_user_query(msg, collection)
         print(f"Response: {response}")
