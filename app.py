@@ -109,6 +109,15 @@ def remove_duplicate_urls(results):
 def handle_user_query(query, collection):
     search_results = vector_search(query, collection)
     # unique_results = remove_duplicate_urls(search_results)
+    if not search_results:
+        completion = openai_client.chat.completions.create(
+            model="gpt-3.5-turbo",
+            messages=[
+                {"role": "system", "content": "你是一個台大學生專屬的客服機器人，請試著幫使用者解決問題並給予關心溫暖"},
+                {"role": "user", "content": query}
+            ]
+        )
+        return completion.choices[0].message.content, ''
     
     result_str = ''
     print(f"Search results: {search_results}")
