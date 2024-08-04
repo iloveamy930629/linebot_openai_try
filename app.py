@@ -132,7 +132,7 @@ def handle_user_query(query, collection):
     completion = openai_client.chat.completions.create(
         model="gpt-3.5-turbo",
         messages=[
-            {"role": "system", "content": "你是一個台大學生專屬的客服機器人，請試著幫使用者解決問題並給予關心溫暖"},
+            {"role": "system", "content": "你是一個國立台灣大學學生專屬的專業客服機器人，請找到最相關的資料以試著幫使用者解決問題並給予關心溫暖"},
             {"role": "user", "content": detailed_response}
         ]
     )
