@@ -118,11 +118,12 @@ def handle_user_query(query, collection):
             f"Description: {result.get('description', 'N/A')}, "
             f"Link: {result.get('link', 'N/A')}\n"
         )
-    detailed_response = f"User query: {query}\n\nContext:\n{result_str}\nPlease provide a concise and relevant response to the user's query, try your best to help the user, including any related links from the context."
+    detailed_response = f"用戶查詢：{query}\n\n資料庫相關資料：\n{result_str}\n請妥善利用資料庫資料提供一個簡潔且相關的回應來回答用戶的查詢，儘量幫助用戶解決問題，並適時提供資料庫中的所需相關鏈接。"
+
     completion = openai_client.chat.completions.create(
         model="gpt-3.5-turbo",
         messages=[
-            {"role": "system", "content": "You are a NTU assistant bot system."},
+            {"role": "system", "content": "你是一個台大學生專屬的客服機器人，請試著幫使用者解決問題並給予關心溫暖"},
             {"role": "user", "content": detailed_response}
         ]
     )
@@ -132,7 +133,7 @@ def handle_user_query(query, collection):
 def summarize_text(text):
     summary_completion = openai_client.chat.completions.create(
         model="gpt-3.5-turbo",
-        messages=[{"role": "user", "content": f"Summarize the following text to only the key points:\n\n{text}, remember to keep the necessary link but don't print many long’s contact details"}]
+        messages=[{"role": "user", "content": f"總結以下文本的關鍵要點，並生成出通順精要的回應文具：\n\n{text}，記得保留必要的網站連接，但不要列出太多冗長的聯絡資訊例如地址電話"}]
     )
 
     return summary_completion.choices[0].message.content
