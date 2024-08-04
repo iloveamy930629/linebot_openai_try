@@ -108,7 +108,7 @@ def remove_duplicate_urls(results):
 
 def handle_user_query(query, collection):
     search_results = vector_search(query, collection)
-    unique_results = remove_duplicate_urls(search_results)
+    # unique_results = remove_duplicate_urls(search_results)
     
     result_str = ''
     print(f"Search results: {search_results}")
@@ -120,7 +120,7 @@ def handle_user_query(query, collection):
         )
     detailed_response = f"Answer this user query: {query} with the following context: {result_str}"
     completion = openai_client.chat.completions.create(
-        model="gpt-4o",
+        model="gpt-3.5-turbo",
         messages=[
             {"role": "system", "content": "You are a NTU assistant bot system."},
             {"role": "user", "content": detailed_response}
@@ -131,7 +131,7 @@ def handle_user_query(query, collection):
 
 def summarize_text(text):
     summary_completion = openai_client.chat.completions.create(
-        model="gpt-4o",
+        model="gpt-3.5-turbo",
         messages=[{"role": "user", "content": f"Summarize the following text to only the key points:\n\n{text}"}]
     )
 
